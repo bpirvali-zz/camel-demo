@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="fragments/head :: head"/>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div th:replace="fragments/head :: menu"/>
+</div>
+
+
+
+
+
+<div />
+<div class="container">
+    <div class="starter-template">
+        <!--/*@thymesVar id="orders" type="java.util.List"*/-->
+        <!--<div th:if="${not #lists.isEmpty(orders)}"  class="row">-->
+            <h1>View Orders</h1>
+            <p>
+                Below are the current list of orders in the system.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Order #</th>
+                        <th>Customer</th>
+                        <th>Time Order Placed</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tr th:each="order : ${orders}" >
+                        <td th:text="${order.id}"></td>
+                        <td th:text="${order.orderNumber}"></td>
+                        <td th:text="${order.customer.firstName + ' ' + order.customer.lastName}"></td>
+                        <td th:text="${order.timeOrderPlaced}"></td>
+                        <td th:text="${order.status}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

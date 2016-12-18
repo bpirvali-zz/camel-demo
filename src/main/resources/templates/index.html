@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head  th:replace="fragments/head :: head"/>
+<body>
+    <div class="container">
+        <!--/*@thymesVar id="name" type="java.lang.String"*/-->
+        <h1 th:text="' Welcome to thymeleaf, ' + ${name} + '!'" >Welcome to thymeleaf</h1>
+    </div>
+    <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+
+</body>
+</html>

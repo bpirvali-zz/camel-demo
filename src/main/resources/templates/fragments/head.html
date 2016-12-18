@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:fragment="head">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+
+    <!-- bootstrap css -->
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"/>
+    <script src="http://http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"/>
+</head>
+
+<body>
+    <div class="container"  th:fragment="menu">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="<c:url value="/orderHome" />">Order Management</a>-->
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle"
+                       data-toggle="dropdown">Orders <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/orderHome">Home</a></li>
+                        <li><a href="/viewOrders">View Orders</a></li>
+                        <li><a href="/processOrders">Process Orders</a></li>
+                        <li><a href="/resetOrders">Reset Orders</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</body>
+</html>

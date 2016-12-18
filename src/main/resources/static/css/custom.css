@@ -1,0 +1,24 @@
+/*
+.btn {
+    border-radius: 0px;
+}
+
+body {
+    padding-top: 100px;
+}
+
+tr {
+    height: 0px;
+}
+*/
+
+section {
+    border: 1px solid blue;
+}
+
+header {
+    border: 1px solid blue;
+}
+footer {
+    border: 1px solid blue;
+}
